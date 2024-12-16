@@ -8,9 +8,7 @@ import {
 } from "./utils/renderUtils.js";
 
 import { faqs } from "./data/faqsData.js";
-import { categories } from "./data/categoriesData.js";
 import { testimonials } from "./data/testimonialsData.js";
-import { specialOffers } from "./data/specialOffersData.js";
 import { isAuthenticated, initAddToCartListeners } from "./utils/cartUtils.js";
 import "./authButton.js";
 

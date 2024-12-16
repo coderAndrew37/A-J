@@ -27,11 +27,8 @@ async function handleSuggestions(event) {
     return;
   }
 
-  console.log("Searching suggestions for:", query); // Debugging log
-
   try {
     const suggestions = await fetchSuggestions(query);
-    console.log("Fetched suggestions:", suggestions); // Debugging log
 
     if (suggestions.length > 0) {
       suggestionsDropdown.innerHTML = suggestions
@@ -62,7 +59,6 @@ const suggestionsCache = {}; // Cache object for suggestions
 
 async function fetchSuggestions(query) {
   if (suggestionsCache[query]) {
-    console.log("Using cached suggestions for:", query);
     return suggestionsCache[query];
   }
 
@@ -94,7 +90,6 @@ async function handleSearch() {
 
     try {
       const results = await searchProducts(searchTerm); // Fetch search results
-      console.log("Search results:", results);
 
       if (Array.isArray(results) && results.length > 0) {
         renderProducts(results, ".js-products-grid"); // Render results

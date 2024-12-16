@@ -1,5 +1,7 @@
 import { addToCart, updateCartQuantity } from "../data/cart.js";
 import { baseUrl } from "./constants.js";
+import "./authButton.js";
+import "./handleSearch.js";
 async function checkAuthentication() {
   try {
     const response = await fetch(`${baseUrl}/api/users/is-authenticated`, {
