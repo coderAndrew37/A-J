@@ -1,14 +1,17 @@
 export const testimonials = [
   {
-    text: "The leather jacket I bought was worth every penny. Great quality and amazing design!",
-    name: "Amina K.",
+    text: "The pork quality is exceptional, and my customers have noticed the difference. Highly recommended for butcheries!",
+    name: "John M., Butcher in Embu",
+    rating: 5, // 5 out of 5 stars
   },
   {
-    text: "Prompt delivery and excellent customer service. Highly recommended.",
-    name: "Joseph M.",
+    text: "Their timely delivery and consistent quality keep my business running smoothly. A reliable supplier.",
+    name: "Alice K., Small Butcher",
+    rating: 4.5, // 4.5 out of 5 stars
   },
   {
-    text: "Best place to buy leather accessories in Nairobi. Loved the custom options.",
-    name: "Grace W.",
+    text: "Affordable prices and excellent service. They even catered to my special request for bulk pork belly cuts.",
+    name: "Peter N., Meat Vendor",
+    rating: 4, // 4 out of 5 stars
   },
 ];

@@ -98,31 +98,6 @@ export function renderPagination(
   });
 }
 
-export function renderCategories(categories) {
-  const categoriesSection = document.querySelector(".categories-section");
-  if (!categoriesSection) return;
-
-  categoriesSection.innerHTML = `
-    <h2>Explore Our Categories</h2>
-    <div class="categories-grid">
-      ${categories
-        .map(
-          (category) => `
-          <div class="category-item">
-            <a href="category.html?category=${category.slug}" class="category-link">
-              <div class="category-image">
-                <img src="${category.image}" alt="${category.name}" />
-              </div>
-              <h3>${category.name}</h3>
-            </a>
-          </div>
-        `
-        )
-        .join("")}
-    </div>
-  `;
-}
-
 export function renderFAQs(faqs) {
   const faqSection = document.querySelector(".faq-section");
   if (!faqSection) return;
@@ -165,35 +140,26 @@ export function renderTestimonials(testimonials) {
     <h2>What Our Customers Say</h2>
     <div class="testimonials-grid">
       ${testimonials
-        .map(
-          (testimonial) => `
+        .map((testimonial) => {
+          const stars = Array.from({ length: 5 })
+            .map(
+              (_, index) =>
+                index < Math.floor(testimonial.rating)
+                  ? '<i class="fas fa-star text-yellow-500"></i>' // Filled star
+                  : testimonial.rating > index && testimonial.rating < index + 1
+                  ? '<i class="fas fa-star-half-alt text-yellow-500"></i>' // Half star
+                  : '<i class="far fa-star text-gray-400"></i>' // Empty star
+            )
+            .join("");
+
+          return `
           <div class="testimonial-item">
             <p>"${testimonial.text}"</p>
             <span>- ${testimonial.name}</span>
+            <div class="stars">${stars}</div>
           </div>
-        `
-        )
-        .join("")}
-    </div>
-  `;
-}
-
-export function renderSpecialOffers(offers) {
-  const offersSection = document.querySelector(".special-offers-section");
-  if (!offersSection) return;
-
-  offersSection.innerHTML = `
-    <h2>Exclusive Deals</h2>
-    <div class="offers-grid">
-      ${offers
-        .map(
-          (offer) => `
-          <div class="offer-item">
-            <img src="${offer.image}" alt="${offer.text}" />
-            <p>${offer.text}</p>
-          </div>
-        `
-        )
+          `;
+        })
         .join("")}
     </div>
   `;

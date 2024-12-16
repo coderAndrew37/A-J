@@ -2,16 +2,16 @@ export const faqs = [
   {
     question: "What are your delivery options?",
     answer:
-      "We offer various delivery options, including standard and express shipping. Orders over KSH 15,000 qualify for free delivery in Nairobi.",
+      "We provide daily delivery services within Embu County. Orders above KSH 10,000 qualify for free delivery.",
   },
   {
-    question: "How do I return a product?",
+    question: "Do you have a minimum order quantity?",
     answer:
-      "You can return a product within 30 days of delivery. Please ensure the item is in its original condition and packaging.",
+      "Yes, our minimum order quantity is 5 kilograms per pork part. For bulk purchases, discounts are available.",
   },
   {
-    question: "Do you offer customization services?",
+    question: "How do I place an order?",
     answer:
-      "Yes, we provide customization options for certain products. Contact our support team for more details.",
+      "You can place an order via phone, email, or WhatsApp. Simply provide the quantity and pork parts you need, and we’ll confirm your order promptly.",
   },
 ];

@@ -3,10 +3,8 @@ import { loadProducts } from "../data/products.js";
 import {
   renderProducts,
   renderPagination,
-  renderCategories,
   renderFAQs,
   renderTestimonials,
-  renderSpecialOffers,
 } from "./utils/renderUtils.js";
 
 import { faqs } from "./data/faqsData.js";
@@ -31,10 +29,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   fetchAndDisplayProducts(currentPage, authenticated);
-  renderCategories(categories);
   renderFAQs(faqs);
   renderTestimonials(testimonials);
-  renderSpecialOffers(specialOffers);
 });
 
 // Fetch and display products
